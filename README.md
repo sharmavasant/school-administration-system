@@ -1,2 +1,3 @@
 # kool-skool
- its an school management system project
+ its a school management system project.
+ 
