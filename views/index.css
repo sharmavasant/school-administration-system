@@ -1,0 +1,25 @@
+.brand {
+	display: block;
+	width: 115px;
+	height: 25px;
+	background: #4e9caf;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
