@@ -102,6 +102,10 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render("register.ejs")
 })
+
+app.get('/headmaster', dataSaved, (req, res) => {
+    res.render("headmaster.ejs")
+})
 // End Routes
 
 // app.delete('/logout', (req, res) => {
@@ -127,6 +131,13 @@ function checkAuthenticated(req, res, next){
 function checkNotAuthenticated(req, res, next){
     if(req.isAuthenticated()){
         return res.redirect("/")
+    }
+    next()
+}
+
+function dataSaved(req, res, next){
+    if(req.isAuthenticated()){
+        return res.redirect("/save")
     }
     next()
 }
