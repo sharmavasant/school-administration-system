@@ -128,20 +128,14 @@
           <nav class="navbar bg-transparent">
             <div class="container">
               <a class="navbar-brand" href="/home">
-                <img style="background-color:#fff;
-                border:1px solid red;    
-                height:70px;
-                border-radius:50%;
-                -moz-border-radius:50%;
-                -webkit-border-radius:50%;
-                width:70px;"
-                  src="./INNOVATORS.jpg"
+                <img
+                  src="./brand.jpg"
                   alt="Logo"
-                  width="70"
-                  height="70"
+                  width="50"
+                  height="50"
                   class="d-inline-block align-text-top"
                 />
-                <p style="font-weight: bold;">Innovation School</p>
+                Innovation School
               </a>
             </div>
           </nav>
@@ -158,15 +152,31 @@
         </div>
       </header>
       <div class="mb-lg-auto">
-        <h1 class="text-dark">Hello <%= name %></h1>
        
         <br />
         <!--**********data fetching**********-->
 
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Serial No.</th>
+            <th scope="col">NAME</th>
+            <th scope="col">CLASS</th>
+            <th scope="col">SECTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% DATA.forEach(function(entry) { %>
+          <tr>
+            <th scope="row"><%= entry.id %></th>
+            <td><%= entry.name %></td>
+            <td><%= entry.class %></td>
+            <td><%= entry.section %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
 
-      <a href="/teacher"><H2>TEACHERS SCHEDULE</H2></a>
-      <BR />
-      <a href="/student"><H2>STUDENTS SCHEDULE</H2></a>
         <p class="lead">
           <!--table for students-->
         </p>

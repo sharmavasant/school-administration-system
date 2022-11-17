@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headmaster Portal</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <!-- Section: Design Block -->
+      <section class="background-radial-gradient overflow-hidden">
+        <style>
+          .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(
+                650px circle at 5% 10%,
+                hsl(190, 51%, 25%) 15%,
+                hsl(222, 68%, 4%) 35%,
+                hsl(218, 0%, 20%) 75%,
+                hsl(214, 17%, 8%) 80%,
+                transparent 100%
+              ),
+              radial-gradient(
+                1250px circle at 100% 100%,
+                hsl(219, 37%, 7%) 15%,
+                hsl(218, 84%, 41%) 35%,
+                hsl(122, 66%, 35%) 75%,
+                hsl(22, 51%, 35%) 80%,
+                transparent 100%
+              );
+          }
+
+          .bg-glass {
+            background-color: hsla(0, 0%, 100%, 0.9) !important;
+            backdrop-filter: saturate(200%) blur(25px);
+          }
+        </style>
+
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+          <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+              <h1
+                class="my-5 display-5 fw-bold ls-tight"
+                style="color: hsl(218, 81%, 95%)"
+              >
+                Welcome to <br />
+                <span style="color: hsl(218, 81%, 75%)">Innovation School</span>
+              </h1>
+              <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
+Malcolm X
+              </p>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+              <div
+                id="radius-shape-1"
+                class="position-absolute rounded-circle shadow-5-strong"
+              ></div>
+              <div
+                id="radius-shape-2"
+                class="position-absolute shadow-5-strong"
+              ></div>
+
+              <div class="card bg-glass">
+                <div class="card-body px-4 py-5 px-md-5">
+                  <form action="/student" method="POST">
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row">
+                      <% if (messages.error) { %>
+                      <div class="alert alert-danger">
+                        <strong><%= messages.error %> </strong>
+                      </div>
+                      <% } %>
+
+                      <h1 class="mb-3 h3">Headmaster Portal for students</h1>
+                    </div>
+
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                      <input
+                        type="name"
+                        name="name"
+                        id="form3Example3"
+                        class="form-control"
+                      />
+                      <label class="form-label" for="form3Example3"
+                        >Enter name</label
+                      >
+                    </div>
+
+                    <!--*****************radio buttons for students******************-->
+                    <label for="cars">Class</label>
+                    <select name="car" id="cars">
+                      <option value="Class-1" name="skar">Class-1</option>
+                      <option value="Class-2" name="skar">Class-2</option>
+                      <option value="Class-3" name="skar">Class-3</option>
+                      <option value="Class-4" name="skar">Class-4</option>
+                    </select>
+                    <br /><br />
+
+                    <!--*************radio buttons for sectioning students**************-->
+                    <label for="cars">Section</label>
+                    <select name="cars" id="cars">
+                      <option value="Sec A" name="metro">Sec A</option>
+                      <option value="Sec B" name="metro">Sec B</option>
+                      <option value="Sec C" name="metro">Sec C</option>
+                    </select>
+
+                    <br /><br />
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block mb-4"
+                    >
+                    Submit
+                    <!--<a href="/save" style="color: white; text-decoration: none;">Submit</a>-->
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Design Block -->
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
