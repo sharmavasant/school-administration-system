@@ -1,5 +1,5 @@
 
-# kool-skool
+# skool-managers
 
 This project is about SCHOOL MANAGEMENT SYSTEM (SMS) in which we have tried to build a management system for school such as to assign classe to teachers and students and registering students in the school web portal.
 
